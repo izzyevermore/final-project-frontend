@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="assets/register.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Register</a></li>
-        </ul>
-        <button>hamburger</button>
+    <nav class="navbar">
+        <a class="logo" href="#">AP Academy</a>
     </nav>
     <header>
         <h1>Contact</h1>
     </header>
-    <section>
-        <form class="register">
-            <label for="name">Enter Fullname</label>
+    <section id="register-form">
+        <form class="register" action="/add-student/" method="POST">
+            Enter Fullname<br>
             <input type="text" name="name"><br>
     
             Enter your Age<br>
