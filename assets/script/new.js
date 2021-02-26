@@ -27,19 +27,35 @@ console.log(users, username, password);
      }
 }
 
+fetch('https://murmuring-anchorage-60741.herokuapp.com/show-admin/',)
+.then(res => res.json())
+.then(data => {
+    console.log(data);
+    admin = data;
+})
 
+function adminLogin(){
+    let inputs = document.getElementsByTagName('input');
 
+    let username  = inputs[0].value;
+    let password = inputs[1].value;
 
-// function Student(student){
-//     return {
-//         id: student[0],
-//         name: student[1],
-//         age: student[2],
-//         username: student[3],
-//         password: student[4],
-//         email: student[5]
-//     }
-// }
+console.log(admin, username, password);
+
+    // let loggedIn = admin.filter(admin => {
+    //     return admin.username == username && admin.password == password
+    // })
+
+    let loggedIn = admin.username == username && admin.password == password ? true : false;
+
+    if(loggedIn){
+        alert('Admin has logged in')
+        window.location.href = './admin.html'
+    }else{
+        alert('Credentials Invalid')
+    }
+}
+
 
 
 
