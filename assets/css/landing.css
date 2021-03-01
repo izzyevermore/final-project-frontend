@@ -1,0 +1,97 @@
+/* This is the landing page css */
+/* Start of navbar of landing page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  background-color: black;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  border-bottom: 5px solid darkgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: Amatic SC;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li a {
+  padding: 10px 15px;
+  color: #6c707c;
+  font-size: 12px;
+  font-family: Amatic SC;
+}
+.toggle {
+  display: none;
+}
+.active a,
+.menu li a:hover {
+  background-color: #292929;
+  color: #fff !important;
+  font-weight: bold;
+  transition: all ease 0.4s;
+}
+
+.menu.responsive li {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* End of navbar styling for landing page */
+
+/* Start of main content for landing page */
+.landing {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: backgroundChange 50s linear infinite;
+  text-shadow: 2px 2px 5px grey;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-image: url("https://picsum.photos/1200?random=1");
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    background-image: url("https://picsum.photos/1200?random=2");
+    transform: translate3d(100vw, 0, 0);
+  }
+  66% {
+    background-image: url("https://picsum.photos/1200?random=3");
+    transform: translate3d(0, 0, 0);
+  }
+  99% {
+    background-image: url("https://picsum.photos/1200?random=1");
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* End of main content for landing page */
