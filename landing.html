@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,19 +27,76 @@
         <ul class="menu" id="nav">
             <li class="active"><a href="#main" >Home</a></li>	
             <li><a href="#about">About</a></li>	
-            <li><a href="#SKILLS">Skills</a></li>	
-            <li><a href="#portfolio">Portfolio</a></li>		
-            <li><a href="#Testimonials">Testimonials</a></li>
-            <li><a href="#contact-form">Contact</a></li>	
+            <li><a href="#SKILLS">Tutoring</a></li>	
+            <li><a href="#portfolio">FAQ</a></li>		
+            <li><a href="#Testimonials">Contact</a></li>
+            <li><a href="#contact-form">LOGOUT</a></li>	
         </ul>
     </nav> 
 <!-- End of nav bar -->
 
 <!-- Start of main content for landing page -->
-    <header class="landing">
-        <h1>title</h1>
-        <button>See More</button>
-    </header>
+
+    <!-- start of the image slider -->
+    <section id="main">
+        <div class="slider">
+            <div class="slides">
+                <!-- Start of radiobuttons -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!-- End of radiobuttons -->
+                <!-- Slide images start -->
+                <div class="slide first">
+                    <img src="../frontend/assets/images-compress/Untitled design.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../frontend/assets/images-compress/Untitled design.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../frontend/assets/images-compress/Untitled design.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="../frontend/assets/images-compress/Untitled design.png" alt="">
+                </div>
+                <!-- Slide images end -->
+                <!-- Automatic navigation Start -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!-- Automatic navigation end -->
+            </div>
+            <!-- manual navigation start -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!-- manual navigation end -->
+        </div>
+    </section>
+        <!-- end of image slider -->
+
+    <!-- Start of about page -->
+    <section id="about">
+        <div class ="about-who">
+            <h3>WHO AM I ?</h3>
+            <p>My greatest passion in life is teaching. I was born and raised in Cape Town, and experienced great success at school and at university due to amazing and unforgettable teachers. This is the foundation of my commitment to helping out my students, whatever their abilities may be.</p>
+            <img class = "img-responsive" src="assets/images-compress/Untitled design.png" style="width:50%">
+        </div>
+        <div class = "about-why">
+            <img class = "img-responsive" src="assets/images-compress/Untitled design.png"style="width:50%">
+            <h3>WHAT I DO?</h3>
+            <p>AP Academy exists to help students. We take a unique and innovative approach to teaching that helps students connect with the subject matter they need to master. All material is CAPS aligned. AP Academy also helps students become more confident in their work and discover their potential.</p>
+        </div>
+    </section>
+    <!-- End of about page -->
 <!-- End of main content for landing page -->
+<script type="text/javascript" src="../frontend/assets/script/landing.js"></script>
 </body>
 </html>

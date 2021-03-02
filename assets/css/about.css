@@ -1,0 +1,9 @@
+.about-who {
+  display: flex;
+}
+.about-why {
+  display: flex;
+}
+#about img {
+  width: 50%;
+}

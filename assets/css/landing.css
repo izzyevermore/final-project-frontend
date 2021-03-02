@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   width: 100%;
   box-sizing: border-box;
@@ -14,11 +18,12 @@
   background-color: black;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
   z-index: 10;
-  border-bottom: 5px solid darkgreen;
+  border-bottom: 5px solid #468902;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  position: fixed;
 }
 
 .logo {
@@ -35,7 +40,7 @@
 .menu li a {
   padding: 10px 15px;
   color: #6c707c;
-  font-size: 12px;
+  font-size: 25px;
   font-family: Amatic SC;
 }
 .toggle {
@@ -63,35 +68,112 @@ a {
 }
 /* End of navbar styling for landing page */
 
-/* Start of main content for landing page */
-.landing {
+/* Start of main slider of tutor images for landing page */
+/* body {
+  margin: 0;
+  padding: 0;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: backgroundChange 50s linear infinite;
-  text-shadow: 2px 2px 5px grey;
+  background: #2596be;
+} */
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-@keyframes backgroundChange {
-  0% {
-    background-image: url("https://picsum.photos/1200?random=1");
-    transform: translate3d(0, 0, 0);
-  }
-  33% {
-    background-image: url("https://picsum.photos/1200?random=2");
-    transform: translate3d(100vw, 0, 0);
-  }
-  66% {
-    background-image: url("https://picsum.photos/1200?random=3");
-    transform: translate3d(0, 0, 0);
-  }
-  99% {
-    background-image: url("https://picsum.photos/1200?random=1");
-    transform: translate3d(0, 0, 0);
-  }
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
 }
-/* End of main content for landing page */
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* css for manual slide navigation */
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn:not(:last-child) {
+  margin-left: 40px;
+}
+
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* css for automatic navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
+}
+
+/* End of main slider of tutor images for landing page */

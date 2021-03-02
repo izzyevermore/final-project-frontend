@@ -17,10 +17,10 @@ function login(){
     let password = inputs[1].value;
 
     let loggedIn = users.filter(user => {
-        return user.username == username && user.password == password
+        return user.username == username && user.password == password ?true : false;
     })
 
-     if(loggedIn){
+     if(loggedIn.length > 0){
         alert('User Found');
         window.location.href = './landing.html'
      } else {
