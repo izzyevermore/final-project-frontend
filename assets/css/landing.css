@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+#main {
+  padding-top: 60px;
+}
+
 .navbar {
   width: 100%;
   box-sizing: border-box;
@@ -90,7 +94,33 @@ a {
   width: 500%;
   height: 500px;
   display: flex;
+  position: relative;
 }
+
+/* .slides:before{
+  content: '';
+  position: abso
+} */
+
+.slide-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1%;
+  border-radius: 20px;
+  top: 50%;
+  max-width: 40vw;
+  font-size: 40px;
+  color: #b1de00;
+  font-family: Barlow Semi Condensed;
+}
+
+.slide img {
+  object-position: 10% 35%;
+}
+
+/* .slide img: {
+  background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5));
+} */
 
 .slides input {
   display: none;
@@ -144,9 +174,9 @@ a {
 .navigation-auto {
   position: absolute;
   display: flex;
-  width: 800px;
+  width: 100vw;
   justify-content: center;
-  margin-top: 460px;
+  margin-top: 9%;
 }
 
 .navigation-auto div {
@@ -177,3 +207,30 @@ a {
 }
 
 /* End of main slider of tutor images for landing page */
+
+/* Start for contact  button on landing page */
+.button {
+  width: 247px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 45px;
+}
+
+.button-1 {
+  background-color: transparent;
+  border: 3px solid #b1de00;
+  border-radius: 50px;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #b1de00;
+}
+.button-1:hover {
+  box-shadow: 0 0 10px 0 #b1de00 inset, 0 0 20px 2px #b1de00;
+  border: 3px solid #b1de00;
+}
+/* End for contact button on landing page */

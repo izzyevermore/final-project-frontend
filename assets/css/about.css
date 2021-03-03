@@ -4,6 +4,35 @@
 .about-why {
   display: flex;
 }
+
+.about-text {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #about img {
   width: 50%;
+}
+
+#about {
+  background-color: black;
+  color: white;
+}
+
+#about .about-heading {
+  color: #b1de00;
+  padding: 2% 0;
+  font-size: 3em;
+  text-align: center;
+  font-family: Amatic SC;
+}
+
+.about-text1 {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
