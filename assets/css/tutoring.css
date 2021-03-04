@@ -1,0 +1,32 @@
+#tutoring {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #133954;
+}
+
+.container.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 60vh;
+  box-shadow: 2px 12px 20px #133954;
+  border: 1px solid #628290;
+  background: #468902;
+}
+
+.container.container-card > div:first-of-type {
+  border-right: 1px solid #000;
+  height: 100%;
+}
+
+.container.container-card > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
