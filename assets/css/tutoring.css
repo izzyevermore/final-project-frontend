@@ -1,6 +1,7 @@
 #tutoring {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #133954;
@@ -8,6 +9,7 @@
 
 .container.container-card {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -17,7 +19,7 @@
   background: #468902;
 }
 
-.container.container-card > div:first-of-type {
+.container.container-card > div:not(:last-of-type) {
   border-right: 1px solid #000;
   height: 100%;
 }
