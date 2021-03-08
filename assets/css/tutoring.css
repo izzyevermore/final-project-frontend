@@ -32,3 +32,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.container.container-card h1 {
+  font-family: Barlow Semi Condensed;
+}
+
+.container.container-card li {
+  font-family: Open Sans;
+}

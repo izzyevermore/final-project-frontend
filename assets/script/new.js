@@ -1,3 +1,5 @@
+
+
 let users = [];
 
 
@@ -17,8 +19,11 @@ function login(){
     let password = inputs[1].value;
 
     let loggedIn = users.filter(user => {
-        return user.username == username && user.password == password ?true : false;
+        return user.username == username && user.password == password ;
     })
+
+    console.log(loggedIn);
+    localStorage.setItem("user", JSON.stringify(loggedIn[0]))
 
      if(loggedIn.length > 0){
         alert("User Found");

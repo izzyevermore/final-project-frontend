@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/tutoring.css">
     <link rel="stylesheet" href="assets/css/testimonials.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,600;1,100&display=swap" rel="stylesheet"> 
@@ -17,22 +18,24 @@
 </head>
 <body>
 <!-- Start of preloader -->
-	<div class="preloader">
-		<div class="loader"></div>
-	</div>
+    <!-- <div class="ring">
+        LOADING
+        <span></span>
+    </div> -->
 <!-- End of preloader -->
 
 <!-- Start of nav bar -->
     <nav class="navbar">
         <a class="logo">AP Academy</a>
-        <div class="toggle"></div>
+        <div class="toggle" onclick="toggleNav()"><i class="fas fa-bars"></i></div>
         <ul class="menu" id="nav">
+            <div class="toggle" onclick="toggleNav()"><i class="fas fa-times" style="position: absolute; top: 0; left: 0;"></i></div>
             <li class="active"><a href="#main" >Home</a></li>	
             <li><a href="#about">About</a></li>	
             <li><a href="#tutoring">Tutoring</a></li>	
-            <li><a href="#portfolio">FAQ</a></li>		
+            <li><a href="./faq.html">FAQ</a></li>		
             <li><a href="#Testimonials">Contact</a></li>
-            <li><a href="./index.html">LOGOUT</a></li>	
+            <li><a href="./index.html">Account</a></li>	
         </ul>
     </nav> 
 <!-- End of nav bar -->
@@ -118,7 +121,7 @@
                     <li>Physical Science</li>
                     <li>Life Science</li>
                 </ul>
-                <h2>Levels of Teaching</h2>
+                <h1>Levels of Teaching</h1>
                 <div class="schools">
                     <ul class="levels">
                         <li>Primary School</li>
@@ -213,8 +216,61 @@
             </div>
         </div>
     </section> 
-    
     <!-- End of testimonials page -->
+
+    <!-- Start of contact form -->
+    <section id="contact">
+        <form id="regForm" action="">
+
+            <h1>Register:</h1>
+            
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab">Name:
+              <p><input placeholder="First name..." oninput="this.className = ''" name="firstname"></p>
+              <p><input placeholder="Last name..." oninput="this.className = ''" name="lastname"></p>
+              <p><input placeholder="Grade..." oninput="this.className = ''" name="grade"></p>
+              <p><input placeholder="Email..." oninput="this.className = ''" name="email"></p>
+            </div>
+            
+            <div class="tab">Subjects:
+              <p><input type="radio" class="form-radio math" name="mathematics" value="mathematics"/><label>Mathematics</label></p>
+              <p><input type="radio" class="form-radio physics" name="physics" value="physics"/><label>Physics</label></p>
+              <p><input type="radio" class="form-radio physics" name="mathlit" value="physics"/><label>Mathematics Literacy</label></p>
+              <p><input type="radio" class="form-radio physics" name="lifescience" value="physics"/><label>Life Sciences</label></p>
+            </div>
+      
+            <div class="tab">Preferences:
+              <p><input type="radio" class="form-radio math" name="online" value="mathematics"/><label>Online</label></p>
+              <p><input type="radio" class="form-radio physics" name="face-to-face" value="physics"/><label>Face-to-Face</label></p>
+            </div>
+            
+            <div class="tab">Inspiration:
+              <p><input placeholder="Current Mark" name="current-mark"></p>
+              <p><input placeholder="Goal" name="goal"></p>
+            </div>
+            
+            <div class="tab">Login Info:
+              <p><input placeholder="Username..." oninput="this.className = ''"></p>
+              <p><input placeholder="Password..." oninput="this.className = ''"></p>
+            </div>
+            
+            <div style="overflow:auto;">
+              <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              </div>
+            </div>
+            
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+        </form> 
+    </section>
+    <!-- End of contact form -->
 
 <!-- End of main content for landing page -->
 <script type="text/javascript" src="../frontend/assets/script/landing.js"></script>
