@@ -31,7 +31,6 @@ function login(){
      } else {
          alert("Credential Invalid");
      }
-     form.reset();
 }
 
 

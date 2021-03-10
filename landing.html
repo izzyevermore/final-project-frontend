@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/landing.css">
@@ -18,10 +20,9 @@
 </head>
 <body>
 <!-- Start of preloader -->
-    <!-- <div class="ring">
-        LOADING
-        <span></span>
-    </div> -->
+<div class="preloader">
+    <div class="loader"></div>
+</div>
 <!-- End of preloader -->
 
 <!-- Start of nav bar -->
@@ -33,9 +34,15 @@
             <li class="active"><a href="#main" >Home</a></li>	
             <li><a href="#about">About</a></li>	
             <li><a href="#tutoring">Tutoring</a></li>	
-            <li><a href="./faq.html">FAQ</a></li>		
-            <li><a href="#Testimonials">Contact</a></li>
-            <li><a href="./index.html">Account</a></li>	
+            <li><a href="#reviews">Reviews</a></li>		
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#">Account</a>
+                <ul class="sub-menu">
+                    <li><a href="./delete.html">Delete account</a></li>
+                    <li><a href="#">Update account</a></li>
+                </ul>
+            </li>
         </ul>
     </nav> 
 <!-- End of nav bar -->
@@ -77,7 +84,7 @@
                     <h4>Hi, I'm Ameerah Peterson
                         and welcome to AP Academy.
                     </h4>
-                    <div class="button button-1">Contact Me</div>
+                    <div class="button button-1" href="#contact">Contact Me</div>
                 </div>
                 <!-- Automatic navigation end -->
             </div>
@@ -114,36 +121,35 @@
     <section id="tutoring">
         <div class="container container-card">
             <div class="left-side">
-                <h1>Subjects</h1>
-                <ul class="subjects">
+                <h1 style="bottom: 18%; position: relative; right: 5%;">Subjects</h1>
+                <ul class="subjects" style="position: relative; bottom: 14%; list-style: disc">
                     <li>Mathematics</li>
                     <li>Math Literacy</li>
                     <li>Physical Science</li>
                     <li>Life Science</li>
                 </ul>
-                <h1>Levels of Teaching</h1>
+                <h1 style="position: relative; right: 1%; bottom: 3%">Levels of Teaching</h1>
                 <div class="schools">
-                    <ul class="levels">
+                    <ul class="levels" style="list-style: disc; padding-right: 8px;">
                         <li>Primary School</li>
                         <li>High School</li>
                     </ul>
                 </div>
             </div>
             <div class="right-side">
-                <h1>Tutoring Options & Pricing</h1>
-                <ul class="options">
+                <h1 style="position: relative; bottom: 9%; right: 3%">Tutoring Options & Pricing</h1>
+                <ul class="options" style="list-style: disc; width: 50%; display: inline-block; position: relative; bottom: 4%;">
                     <li>Classroom of 3-4 high school students: Rate: R120/1hr30</li>
                     <li>One-on-One high school students high school students: Rate: R150/1hr30min</li>
                     <li>One-on-One primary: Rate: R100/1hr</li>
                 </ul>
             </div>
-            <!-- This is a button that takes user to FAQ page -->
-            <div class="faq-btn">Learn More</div>
             <!-- End of the button that takes user to FAQ page -->
         </div>
-        <div id="special">
-            <div class="container-special">
-                <button src="">BOOK NOW</button>
+        <div id="special" style="position: relative; top: 6%;">
+            <div class="container3">
+                <a href="#contact" class="btn3 btn1" style="font-family: Barlow Semi Condensed; font-weight: bold;">BOOK NOW AND GET A FREE TRAIL LESSON</a>
+                <a href="./faq.html" class="btn3 btn1" style="font-family: Barlow Semi Condensed; font-weight: bold;">Learn More</a>
             </div>
         </div>
     </section>
@@ -153,7 +159,7 @@
     Code inspired from a youtube channel: https://www.youtube.com/watch?v=fzgLWi40-2g -->
     <section id="reviews">
         <div class="hero">
-            <h1>What happy parents and students say</h1>
+            <h1 style="padding-top: 79px;">What happy parents and students say</h1>
     
             <div class="testimonial-container">
                 <div class="indicator">
@@ -220,44 +226,42 @@
 
     <!-- Start of contact form -->
     <section id="contact">
-        <form id="regForm" action="">
-
-            <h1>Register:</h1>
-            
+        <form id="regForm" action="http://127.0.0.1:5000/send-email/" method="post">
+            <h1 style="font-family: Barlow Semi Condensed; color: #b1de00">Contact Me:</h1>
             <!-- One "tab" for each step in the form: -->
-            <div class="tab">Name:
-              <p><input placeholder="First name..." oninput="this.className = ''" name="firstname"></p>
-              <p><input placeholder="Last name..." oninput="this.className = ''" name="lastname"></p>
-              <p><input placeholder="Grade..." oninput="this.className = ''" name="grade"></p>
-              <p><input placeholder="Email..." oninput="this.className = ''" name="email"></p>
+            <div class="tab" style="color: #b1de00; font-family: Open Sans;">Credentials:
+              <p><input placeholder="First name..." oninput="this.className = ''" name="firstname" required></p>
+              <p><input placeholder="Last name..." oninput="this.className = ''" name="lastname" required></p>
+              <p><input placeholder="Grade..." oninput="this.className = ''" name="grade" required></p>
+              <p><input placeholder="Email..." oninput="this.className = ''" name="email" required></p>
             </div>
             
-            <div class="tab">Subjects:
+            <div class="tab" style="color: #b1de00; font-family: Open Sans;">Subjects:
               <p><input type="radio" class="form-radio math" name="mathematics" value="mathematics"/><label>Mathematics</label></p>
               <p><input type="radio" class="form-radio physics" name="physics" value="physics"/><label>Physics</label></p>
               <p><input type="radio" class="form-radio physics" name="mathlit" value="physics"/><label>Mathematics Literacy</label></p>
               <p><input type="radio" class="form-radio physics" name="lifescience" value="physics"/><label>Life Sciences</label></p>
             </div>
       
-            <div class="tab">Preferences:
+            <div class="tab" style="color: #b1de00; font-family: Open Sans;">Preferences:
               <p><input type="radio" class="form-radio math" name="online" value="mathematics"/><label>Online</label></p>
               <p><input type="radio" class="form-radio physics" name="face-to-face" value="physics"/><label>Face-to-Face</label></p>
             </div>
             
-            <div class="tab">Inspiration:
-              <p><input placeholder="Current Mark" name="current-mark"></p>
-              <p><input placeholder="Goal" name="goal"></p>
+            <div class="tab" style="color: #b1de00; font-family: Open Sans;">Inspiration:
+              <p><input placeholder="Current Mark" name="current-mark" required></p>
+              <p><input placeholder="Goal" name="goal" required></p>
             </div>
             
             <div class="tab">Login Info:
               <p><input placeholder="Username..." oninput="this.className = ''"></p>
-              <p><input placeholder="Password..." oninput="this.className = ''"></p>
+              <p><input type="password"placeholder="Password..." oninput="this.className = ''"></p>
             </div>
             
             <div style="overflow:auto;">
               <div style="float:right;">
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                <button type="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
               </div>
             </div>
             
@@ -273,7 +277,51 @@
     <!-- End of contact form -->
 
 <!-- End of main content for landing page -->
+
+<footer>
+    <div class="container2">
+        <div class="sec aboutus">
+            <h2>About Me</h2>
+            <p>AP Academy exists to help students. We take a unique and innovative approach to teaching that helps students connect with the subject matter they need to master. All material is CAPS aligned. We also help students become more confident in their work and discover their potential. Through personalised and focussed teaching methods. </p>
+            <ul class="sci">
+                <li><a href="https://www.instagram.com/ap_academy_/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a class="quick-link" href="#main">Home</a></li>
+                <li><a class="quick-link" href="#about">About</a></li>
+                <li><a class="quick-link" href="#tutoring">Tutoring</a></li>
+                <li><a class="quick-link" href="./faq.html">FAQ</a></li>
+                <li><a class="quick-link" href="#">Account</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contact Info</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fas fa-map-marker-alt" aria-hidden="true" style="color: #b1de00"></i></span>
+                    <span>52 Surrey Street<br>
+                    Goodwood, 7460,<br>Cape Town</span>
+                </li>
+                <li>
+                    <span><i class="fas fa-phone" aria-hidden="true"></i></span>
+                    <p><a href="tel: 0635539702"> +27 63 553 9702</a><p>
+                </li>
+                <li>
+                    <span><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                    <p><a href="mailto:izzyevermore123@gmail.com"></a>apacademy@icloud.com</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="copyrightText">
+    <p>Copyright <a href="https://izzyevermore.netlify.app" aria-hidden="true">@IZZYEVERMORE..</a>  All rights reserved BY LifeChoices Academy.</p>
+</div>
 <script type="text/javascript" src="../frontend/assets/script/landing.js"></script>
 <script type="text/javascript" src="../frontend/assets/script/reviews.js"></script>
+<script type="text/javascript" src="../frontend/assets/script/contact.js"></script>
 </body>
 </html>
