@@ -322,4 +322,8 @@ a {
   .navigation-auto {
     display: none;
   }
+
+  .slide-text {
+    padding: 0%;
+  }
 }

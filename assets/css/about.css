@@ -49,3 +49,11 @@
 .about-text p {
   font-size: 1.2rem;
 }
+
+@media (max-width: 672px) {
+  .img-responsive {
+    position: relative;
+    top: 33%;
+    left: 21%;
+  }
+}
