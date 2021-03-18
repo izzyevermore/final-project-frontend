@@ -26,7 +26,7 @@ function login(){
     localStorage.setItem("user", JSON.stringify(loggedIn[0]))
 
      if(loggedIn.length > 0){
-        alert("User Found");
+        alert("User logged in");
         window.location.href = "./landing.html";
      } else {
          alert("Credential Invalid");
