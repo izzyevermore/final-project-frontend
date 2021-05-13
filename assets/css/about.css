@@ -22,8 +22,10 @@
 }
 
 #about img {
-  width: 70%;
+  width: 67%;
   padding-top: 114px;
+  position:relative;
+  bottom: 7%
 }
 
 #about {
