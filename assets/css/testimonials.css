@@ -65,10 +65,10 @@
 }
 
 .testimonial-container {
-  width: 800px;
-  height: 400px;
+  width: 785px;
+  height: 415px;
   position: absolute;
-  top: 35%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
